@@ -17,7 +17,6 @@
 		56957CE01E98E50300D6A091 /* PPSNetworkMonitorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 56957CDF1E98E50300D6A091 /* PPSNetworkMonitorTests.m */; };
 		56957CEB1E98E50300D6A091 /* PPSNetworkMonitorUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 56957CEA1E98E50300D6A091 /* PPSNetworkMonitorUITests.m */; };
 		56957CFB1E98E6CA00D6A091 /* PPSURLProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 56957CFA1E98E6CA00D6A091 /* PPSURLProtocol.m */; };
-		BF2739F52E192A3300EFD7F0 /* NSURL+NJLoad.m in Sources */ = {isa = PBXBuildFile; fileRef = BF2739F42E192A3300EFD7F0 /* NSURL+NJLoad.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,8 +57,6 @@
 		56957CEC1E98E50300D6A091 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		56957CF91E98E6CA00D6A091 /* PPSURLProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPSURLProtocol.h; sourceTree = "<group>"; };
 		56957CFA1E98E6CA00D6A091 /* PPSURLProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPSURLProtocol.m; sourceTree = "<group>"; };
-		BF2739F32E192A3300EFD7F0 /* NSURL+NJLoad.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSURL+NJLoad.h"; sourceTree = "<group>"; };
-		BF2739F42E192A3300EFD7F0 /* NSURL+NJLoad.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSURL+NJLoad.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,8 +154,6 @@
 				56957CFA1E98E6CA00D6A091 /* PPSURLProtocol.m */,
 				563873A81E9B32AA00E96BEF /* PPSURLSessionConfiguration.h */,
 				563873A91E9B32AA00E96BEF /* PPSURLSessionConfiguration.m */,
-				BF2739F32E192A3300EFD7F0 /* NSURL+NJLoad.h */,
-				BF2739F42E192A3300EFD7F0 /* NSURL+NJLoad.m */,
 			);
 			path = Monitor;
 			sourceTree = "<group>";
@@ -300,7 +295,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF2739F52E192A3300EFD7F0 /* NSURL+NJLoad.m in Sources */,
 				56957CCD1E98E50300D6A091 /* ViewController.m in Sources */,
 				56957CCA1E98E50300D6A091 /* AppDelegate.m in Sources */,
 				56957CC71E98E50300D6A091 /* main.m in Sources */,

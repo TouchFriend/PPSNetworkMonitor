@@ -40,7 +40,11 @@ static NSString *const PPSHTTP = @"PPSHTTP";//为了避免canInitWithRequest和c
 }
 
 + (void)load {
-    
+    NSLog(@"cxzcxz:load success");
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        [PPSURLProtocol start];
+    });
 }
 
 + (void)start {
