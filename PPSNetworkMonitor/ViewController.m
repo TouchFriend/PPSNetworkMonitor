@@ -38,7 +38,7 @@
             } else {
                 NSData *jsonData = [NSJSONSerialization dataWithJSONObject:jsonObj options:NSJSONWritingPrettyPrinted error:nil];
                 NSString *jsonString = [[NSString alloc]initWithData:jsonData encoding:NSUTF8StringEncoding];
-                NSLog(@"接受到的数据:%@", jsonString);
+                NSLog(@"接收到的数据:%@", jsonString);
             }
         }
         NSLog(@"请求完成");
