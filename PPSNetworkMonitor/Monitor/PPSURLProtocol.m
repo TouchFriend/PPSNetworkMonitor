@@ -24,11 +24,19 @@ static NSString *const PPSHTTP = @"PPSHTTP";//为了避免canInitWithRequest和c
 @implementation PPSURLProtocol
 
 #pragma mark - init
-- (instancetype)init {
-    self = [super init];
+
+- (instancetype)initWithRequest:(NSURLRequest *)request cachedResponse:(nullable NSCachedURLResponse *)cachedResponse client:(nullable id <NSURLProtocolClient>)client {
+    self = [super initWithRequest:request
+                   cachedResponse:cachedResponse
+                           client:client];
     if (self) {
+        [self doInit];
     }
     return self;
+}
+
+- (void)doInit {
+    self.pps_data = [NSMutableData data];
 }
 
 + (void)load {
@@ -109,6 +117,10 @@ static NSString *const PPSHTTP = @"PPSHTTP";//为了避免canInitWithRequest和c
     //获取请求结果
     NSString *string = [self responseJSONFromData:self.pps_data];
     NSLog(@"请求结果：%@",string);
+    self.pps_request = nil;
+    self.pps_response = nil;
+    self.pps_data = [NSMutableData data];
+    
     
 }
 
@@ -161,7 +173,7 @@ didReceiveResponse:(NSURLResponse *)response {
 }
 
 //转换json
--(id)responseJSONFromData:(NSData *)data {
+- (id)responseJSONFromData:(NSData *)data {
     if(data == nil) return nil;
     NSError *error = nil;
     id returnValue = [NSJSONSerialization JSONObjectWithData:data options:0 error:&error];
